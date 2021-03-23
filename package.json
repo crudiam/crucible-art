@@ -1,0 +1,21 @@
+{
+  "name": "crucible-art",
+  "version": "1.0.0",
+  "description": "alchemist crucible generative nft art ",
+  "main": "index.js",
+  "repository": "git@crud:crudiam/crucible-art.git",
+  "author": "crudiam <crudiam@protonmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.10",
+    "babel": "^6.23.0",
+    "del": "^6.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.2"
+  }
+}
