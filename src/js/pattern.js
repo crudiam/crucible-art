@@ -1,7 +1,6 @@
 
 
-
-
+function pattern() {
 
 const axioms = [
     'FF+FF+FF+FF',
@@ -71,11 +70,15 @@ function generateShape() {
 }
 
 
-function drawPattern() {
+return () => {
     push()
     stroke(256, 256, 256, 60);
     generateShape();
     turtle();
     pop()
+
+}
+
+
 
 }

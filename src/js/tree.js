@@ -137,6 +137,10 @@
 // }
 
 
+
+function tree() {
+
+
 let size;
 let maxLevel;
 let rot;
@@ -155,7 +159,7 @@ function initConfig() {
     maxLevel = 11;
     rot = (PI / 2) / 4;
     lenRand = 1;
-    branchProb = 0.93;
+    branchProb = 0.92;
     rotRand = 0.1;
     leafProb = 0.5;
     flowerProb = 0.5;
@@ -175,10 +179,7 @@ function startGrow() {
 }
 
 
-function createTree() {
-    initConfig();
-    drawTree();
-}
+
 
 function drawTree() {
     push();
@@ -286,4 +287,10 @@ function rand2()
 function rrand()
 {
 	return rand2() + randBias;
+}
+
+return () => {
+    initConfig();
+    drawTree();
+}
 }

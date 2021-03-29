@@ -19,7 +19,7 @@ const clean = () => del(['dist']);
 function scripts() {
   return gulp.src(paths.scripts.src, { sourcemaps: true })
     .pipe(babel())
-    // .pipe(uglify())
+    .pipe(uglify())
     .pipe(concat('index.min.js'))
     .pipe(gulp.dest(paths.scripts.dest));
 }

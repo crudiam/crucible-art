@@ -1,24 +1,10 @@
 const WIDTH = 729;
 const HEIGHT = 729;
-
-let tree;
-
-
 let seed;
 
-
-
 function setup() {
-    // createCanvas(WIDTH, HEIGHT);
     createCanvas(WIDTH, HEIGHT);
-
-    seed = initializeSeed();
-    // tree = initializeTree(seed);
-
-
-
-    
-
+    seed = initSeed()();
 }
 
 function draw() {
@@ -44,9 +30,9 @@ function renderSymbol(x, y) {
 function init(font) {
     textFont(font, 36);
     circlesAndStuff()
-    drawPattern();
-    createTree();
-    drawPotion();
+    pattern()();
+    tree()();
+    potion()();
 }
 
 

@@ -1,7 +1,10 @@
 
-const SEED = '0x1183710963576842723260160191344579116124668017927';
 
-function initializeSeed(seed = SEED) {
+function initSeed() {
+
+const SEED = '0x12312312544354361212312542365436123';
+
+return (seed = SEED) => {
 
     if (typeof seed === 'number') seed = seed.toString(16);
     if (seed.startsWith('0x')) seed = seed.slice(2);
@@ -18,4 +21,6 @@ function initializeSeed(seed = SEED) {
         nextByte,
         updateRandomSeed
     };
+}
+
 }

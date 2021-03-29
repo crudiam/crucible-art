@@ -1,14 +1,11 @@
 
 
+function potion() {
 
 
-function drawPotion() {
 
-    stroke(256, 256, 256, 80)
-    trippleCircles(50, 150, 50, 20, 50, 50, 20);
-    // trippleCircles(50, 150, 100, 20, 50, 80, 50);
 
-}
+
 
 
 
@@ -152,5 +149,13 @@ function trippleCircles(r1, r2, r3, h1, h2, h3, h4) {
     // stroke(256);
     drawCork(x, y, r1 / 1.5, neckHeight);
     pop();
+
+}
+
+return () =>  {
+    stroke(256, 256, 256, 80)
+    trippleCircles(50, 150, 50, 20, 50, 50, 20);
+
+}
 
 }
