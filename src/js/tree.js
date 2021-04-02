@@ -155,14 +155,14 @@ let paramSeed = 0;
 	
 
 function initConfig() {
-    size = 100;
-    maxLevel = 11;
+    size = 110;
+    maxLevel = 4;
     rot = (PI / 2) / 4;
     lenRand = 1;
-    branchProb = 0.92;
+    branchProb = 0.923;
     rotRand = 0.1;
-    leafProb = 0.5;
-    flowerProb = 0.5;
+    leafProb = 0;
+    flowerProb = 0;
 }
 
 

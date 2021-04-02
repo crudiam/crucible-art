@@ -44,7 +44,10 @@ function drawWaterLevel(x, y, h, r) {
 
 function drawCork(x, y, r, h) {
     push();
-    strokeWeight(0.2);
+
+    fill(63, 42, 20);
+    stroke(63, 42, 20);
+    strokeWeight(1);
     const margin = 20;
 
     const r1 = r * 1.1;
@@ -77,7 +80,7 @@ function drawCork(x, y, r, h) {
 function trippleCircles(r1, r2, r3, h1, h2, h3, h4) {
 
     const x = width / 2;
-    const y = 3 * height / 5;
+    const y = (3 * height / 5) + 25;
     push();
     strokeWeight(1);
     fill(168, 204, 215, 180)
@@ -93,6 +96,7 @@ function trippleCircles(r1, r2, r3, h1, h2, h3, h4) {
     const bodyHeight = h1 + h2 + h3 + h4;
     const neckHeight = (bodyHeight / 4) + h1;
 
+    drawCork(x, y, r1 / 1.5, neckHeight);
 
     beginShape();
     // neck
@@ -116,38 +120,37 @@ function trippleCircles(r1, r2, r3, h1, h2, h3, h4) {
     pop()
 
     push();
-    // fill(255, 65, 98, 200);
-    // fill(255, 40, 77, 200);
-    // fill(244, 0, 42, 200);
-    // fill(258, 167, 194);
-    fill(255, 0, 122);
-    stroke(168, 204, 215, 256);
+    // // fill(255, 65, 98, 200);
+    // // fill(255, 40, 77, 200);
+    // // fill(244, 0, 42, 200);
+    // // fill(258, 167, 194);
+    // // fill(255, 0, 122);
+    // stroke(168, 204, 215, 256);
 
-    // fill(35, 172, 96, 80);
-    // fill(139, 0, 139 );
-    // ellipse(x, y + h, r, r/7);                                                                                                                                                                                                                   
-    arc(x, y + h1 + h2, r2, r2/7, PI, 0);
+    // // fill(35, 172, 96, 80);
+    // // fill(139, 0, 139 );
+    // // ellipse(x, y + h, r, r/7);                                                                                                                                                                                                                   
+    // arc(x, y + h1 + h2, r2, r2/7, PI, 0);
 
-    beginShape();
-    curveVertex(x - r1/2, y + h1)
-    curveVertex(x - r2/2, y + h1 + h2)
-    curveVertex(x - r3/2, y + h1 + h2 + h3)
-    curveVertex(x, y + h1 + h2 + h3 + h4)
-    curveVertex(x + r3/2, y + h1 + h2 + h3)
-    curveVertex(x + r2/2, y + h1 + h2)
-    curveVertex(x + r1/2, y + h1)
-    endShape();
+    // beginShape();
+    // curveVertex(x - r1/2, y + h1)
+    // curveVertex(x - r2/2, y + h1 + h2)
+    // curveVertex(x - r3/2, y + h1 + h2 + h3)
+    // curveVertex(x, y + h1 + h2 + h3 + h4)
+    // curveVertex(x + r3/2, y + h1 + h2 + h3)
+    // curveVertex(x + r2/2, y + h1 + h2)
+    // curveVertex(x + r1/2, y + h1)
+    // endShape();
 
     
-    drawWaterLevel(x, y, h1 + h2, r2);
+    // drawWaterLevel(x, y, h1 + h2, r2);
 
     drawingContext.shadowBlur = 10;
     drawingContext.shadowColor = 'black';
-    fill(168, 204, 215, 256);
     
     stroke(0);
     // stroke(256);
-    drawCork(x, y, r1 / 1.5, neckHeight);
+    // fill(168, 204, 215, 256);
     pop();
 
 }

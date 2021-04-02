@@ -9,13 +9,16 @@ function setup() {
 
 function draw() {
     noLoop();
-    background(26, 4, 3)
+    // background(26, 4, 3)
     loadFont('src/fonts/Everson\ Mono.ttf', init);
 }
 
+let _ii = 10;
+
 function renderSymbol(x, y) {
     const symbols = Object.keys(symbolMap);
-    const index = Math.ceil(random(0, symbols.length))
+    const index = _ii;
+    _ii += 5;
     const symbol = symbols[index];
     push()
     textAlign(CENTER);
@@ -30,7 +33,7 @@ function renderSymbol(x, y) {
 function init(font) {
     textFont(font, 36);
     circlesAndStuff()
-    pattern()();
+    // pattern()();
     tree()();
     potion()();
 }
@@ -40,16 +43,17 @@ function init(font) {
 function circlesAndStuff() {
     push();
     stroke(256, 256, 256, 260);
-    strokeWeight(1);
+    strokeWeight(2);
     noFill();
     
     // center
     stroke(218, 165, 32);
+    stroke(89, 68, 13);
+    stroke(153, 116, 23);
     ellipse(width/2, height/2, 513, 513);
 
     fill(0, 13, 26);
     ellipse(width/2, height/2, 480, 480);
-    strokeWeight(1);
     stars();
     noFill();
 
@@ -88,7 +92,7 @@ function circlesAndStuff() {
     translate(width/2, height/2)
     rotate(PI / 4)
     rectMode(CENTER);
-    // rect(0, 0, 500, 500);
+    rect(0, 0, 513, 513);
     rotate(PI / 4)
     rect(0, 0, 513, 513);
     pop()
